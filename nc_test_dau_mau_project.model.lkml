@@ -16,3 +16,5 @@ persist_with: nc_test_dau_mau_project_default_datagroup
 explore: daily_active_users {}
 
 explore: monthly_active_users {}
+
+explore: dau_mau_calc {}
