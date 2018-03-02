@@ -1,7 +1,7 @@
 view: daily_active_users {
   sql_table_name: blast.daily_active_users ;;
 
-  measure: active_users {
+  dimension: active_users {
     type: number
     sql: ${TABLE}.active_users ;;
   }
