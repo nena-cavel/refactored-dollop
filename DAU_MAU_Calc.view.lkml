@@ -3,7 +3,7 @@ view: dau_mau_calc {
     sql: SELECT
      monthly_active_users.date as date
    , monthly_active_users.active_users as monthly_actives
-    FROM wwi-data-playground-3:blast.monthly_active_users
+    FROM blast.monthly_active_users
     ;;
   }
     dimension: date {
