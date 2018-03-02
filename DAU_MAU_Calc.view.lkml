@@ -8,9 +8,9 @@ view: dau_mau_calc {
   }
     dimension: date {
       type: date
-      sql: [${TABLE}].month_date ;;
+      sql: [${TABLE}].date ;;
   }
-    measure: monthly_actives  {
+    dimension: monthly_actives  {
       type: number
       sql: [${TABLE}].monthly_actives;;
     }
