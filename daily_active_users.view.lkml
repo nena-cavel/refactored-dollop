@@ -1,17 +1,8 @@
 view: daily_active_users {
   sql_table_name: blast.daily_active_users ;;
 
-  dimension_group: date {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
+  dimension: date {
+    type:  date
     datatype: date
     sql: ${TABLE}.date ;;
   }
