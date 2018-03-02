@@ -6,9 +6,19 @@ view: dau_mau_calc {
     FROM blast.monthly_active_users
     ;;
   }
-    dimension: date {
-      type: date
-      sql: [${TABLE}].date ;;
+  dimension_group: date {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.date ;;
   }
     dimension: monthly_actives  {
       type: number
