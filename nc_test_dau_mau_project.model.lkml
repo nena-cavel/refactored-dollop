@@ -15,6 +15,14 @@ persist_with: nc_test_dau_mau_project_default_datagroup
 
 explore: daily_active_users {}
 
-explore: monthly_active_users {}
+explore: dau_mau_table {}
 
-explore: dau_mau_calc {}
+
+explore: monthly_active_users {
+  join: daily_active_users  {
+   sql_on: ${monthly_active_users.date_month} = ${daily_active_users.date_month};;
+  type: left_outer
+  relationship: one_to_many
+  }
+
+}
